@@ -170,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
             Log.e(TAG, mSource + " " + location.toString());
 
             removeLocationListeners();
+            refreshLocationUI(location);
             executeGetWeatherByLocation(location);
         }
 
@@ -240,11 +241,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void refreshLocationUI(Location location){
+        setText(mTextViewSensorLatitude, getString(R.string.latitude_format, location.getLatitude()));
+        setText(mTextViewSensorLongitude, getString(R.string.longitude_format, location.getLongitude()));
+        setText(mTextViewSensorProvider, getString(R.string.provider_format, location.getProvider()));
+    }
+
     private void refreshUI() {
         if (mLocation != null){
-            setText(mTextViewSensorLatitude, getString(R.string.latitude_format, mLocation.getLatitude()));
-            setText(mTextViewSensorLongitude, getString(R.string.longitude_format, mLocation.getLongitude()));
-            setText(mTextViewSensorProvider, getString(R.string.provider_format, mLocation.getProvider()));
+            refreshLocationUI(mLocation);
         }
 
         if (mData != null){
