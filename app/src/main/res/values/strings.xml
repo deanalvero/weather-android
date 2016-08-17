@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Weather</string>
+
+
+    <string name="sensor">Sensor</string>
+    <string name="latitude_format">Latitude: %f</string>
+    <string name="longitude_format">Longitude: %f</string>
+    <string name="provider_format">Provider: %s</string>
+
+    <string name="api_error">An error has occured. Please check your internet connection.</string>
+
+
+    <string name="api">API</string>
+    <string name="temp_format">Temp: %1$.3fK / %2$.1f&#xb0;C / %3$.1f&#xb0;F</string>
+    <string name="temp_min_format">Temp Min: %1$.3fK / %2$.1f&#xb0;C / %3$.1f&#xb0;F</string>
+    <string name="temp_max_format">Temp Max: %1$.3fK / %2$.1f&#xb0;C / %3$.1f&#xb0;F</string>
+    <string name="humidity_format">Humidity: %.1f %%</string>
+    <string name="pressure_format">Pressure: %.2f hPa</string>
+    <string name="sea_level_format">Sea Level: %.2f hPa</string>
+    <string name="grnd_level_format">Grnd Level: %.2f hPa</string>
+
+</resources>
